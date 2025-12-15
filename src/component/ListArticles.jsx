@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 const ListArticles = () => {
 
@@ -12,11 +12,12 @@ const ListArticles = () => {
     // et on les stocke dans le state products via setProducts
     // ce qui recharge le composant (au second chargement
     // on ne passe pas dans le if car le tableau n'est plus vide)
-  if (products.length === 0) {
-    fetch('https://fakestoreapi.com/products')
-        .then(response => response.json())
-        .then(data => setProducts(data));
-  }
+  useEffect(() => {
+      fetch('https://fakestoreapi.com/products')
+          .then(response => response.json())
+          .then(data => setProducts(data));
+  }, []);
+
 
 
   return (
