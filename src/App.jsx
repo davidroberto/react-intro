@@ -1,14 +1,15 @@
 import "./App.css";
-import ListArticles from "./component/ListArticles.jsx";
+import ListProducts from "./component/ListProducts.jsx";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import ShowArticlePage from "./pages/ShowArticlePage.jsx";
+import ShowProductPage from "./pages/ShowProductPage.jsx";
+import HomePage from "./pages/HomePage.jsx";
 
 function App() {
   return (
     <BrowserRouter>
         <Routes>
-            <Route path="/" element={<ListArticles />} />
-            <Route path="/articles/:id" element={<ShowArticlePage />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/products/:id" element={<ShowProductPage />} />
         </Routes>
 
     </BrowserRouter>

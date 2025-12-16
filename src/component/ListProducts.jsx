@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 
-const ListArticles = () => {
+const ListProducts = () => {
 
   const [products, setProducts] = useState([]);
 
@@ -38,4 +38,4 @@ const ListArticles = () => {
   );
 };
 
-export default ListArticles;
+export default ListProducts;

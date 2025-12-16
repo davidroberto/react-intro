@@ -1,9 +1,9 @@
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
+import Header from "../component/Header.jsx";
 
-const ShowArticlePage = () => {
+const ShowProductPage = () => {
 
-    // Récupère le paramètre id depuis l'URL
 
     const {id} = useParams();
 
@@ -18,16 +18,21 @@ const ShowArticlePage = () => {
     }, []);
 
     return (
-        <div>
-            <h1>Show product {id}</h1>
 
-            {product && (<div>
-                <h2>{product.title}</h2>
-                <p>Prix : {product.price}</p>
-            </div>
-            )}
-        </div>
+        <>
+            <Header />
+            <section>
+                <h1>Show product {id}</h1>
+
+                {product && (<div>
+                        <h2>{product.title}</h2>
+                        <p>Prix : {product.price}</p>
+                    </div>
+                )}
+            </section>
+        </>
+
     )
 }
 
-export default ShowArticlePage;
+export default ShowProductPage;
