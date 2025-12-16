@@ -6,6 +6,8 @@ const ListProducts = () => {
   const [products, setProducts] = useState([]);
 
 
+    https://www.leboncoin.fr/recherche?category=43&text=game+boy&locations=L%C3%A8ge-Cap-Ferret__44.72620536922285_-1.1954484745680396_10000_20000&kst=r&from=rs
+
     // au premier chargement du composant
     // le state products contient un tableau vide
     // donc on passe dans le if
