@@ -1,10 +1,14 @@
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 const Header = () => {
 
+    const navigate = useNavigate();
+
     const handleSearchSubmit = (event) => {
         event.preventDefault();
-        console.log("search submitted");
+        const search = event.target.search.value;
+
+        navigate(`/products/search?s=${search}`);
     }
 
     return (
