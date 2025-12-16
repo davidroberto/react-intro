@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import {Link} from "react-router-dom";
 
 const ListProducts = () => {
 
@@ -31,6 +32,7 @@ const ListProducts = () => {
         {products.map(product => (
             <article key={product.id}>
                 <h2>{product.title}</h2>
+                <Link to={"/products/" + product.id}>Voir le produit</Link>
             </article>
         ))}
       </section>
